@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import InputCreateTodo from '../components/InputCreateTodo';
-import TodoList from '../components/TodoList';
+import InputCreateTodo from '@/components/todo/InputCreateTodo';
+import TodoList from '@/components/todo/TodoList';
 
 export default {
   name: 'Todo',

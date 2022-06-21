@@ -6,11 +6,11 @@
 
 <script>
 export default {
-    data() {
-        return {
-
-        }
+  name: 'Popup',
+  data() {
+    return {
     }
+  },
 }
 </script>
 

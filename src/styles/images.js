@@ -1,16 +1,7 @@
-// const appImages = {
-//     logo: require('@/assets/logo.png'),
-// }
-
-// const aboutImages = {
-//     about: require('@/assets/road.jpg'),
-// }
-
-//AppStates
 export default {
+    backgroundNavbar: 'https://picsum.photos/id/1004/1920/1080',
+
     logo: require('@/assets/logo.png'),
     about: require('@/assets/road.jpg'),
 }
 
-
-// export default {appImages, aboutImages}
