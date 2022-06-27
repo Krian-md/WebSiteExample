@@ -1,6 +1,7 @@
 import Vue from "vue";
 import todo from "./models/todo";
-import cardImage from "./models/cardImage";
+import popup from "./models/popup";
+import tosterError from "./models/tosterError";
 import Vuex from "vuex";
 
 Vue.use(Vuex);
@@ -8,6 +9,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     modules: {
         todo,
-        cardImage
+        popup,
+        tosterError
     }
 });

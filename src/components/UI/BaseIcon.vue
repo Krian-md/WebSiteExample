@@ -1,9 +1,7 @@
 <template>
-    <v-btn icon>
-        <v-icon :size="size">
-            {{iconName}}
-        </v-icon> 
-    </v-btn>
+    <v-icon v-bind="$attrs">
+        {{iconName}}
+    </v-icon> 
 </template>
 
 <script>
@@ -14,10 +12,6 @@ export default {
             type: String,
             required: true
         },
-        size: {
-            type: Number,
-            default: 16
-        }
     }
 }
 </script>

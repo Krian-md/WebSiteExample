@@ -6,13 +6,16 @@
         class="blue darken-3 white--text text-center"
       >
         <v-card-text>
-          <BaseIcon
+          <BaseButton icon  
             v-for="icon in icons"
             :key="icon"
-            :iconName="icon"
+            plain
             class="mx-4 white--text"
-            :size="24"
-            />
+            > 
+            <BaseIcon
+              :iconName="icon"
+              />
+          </BaseButton>
         </v-card-text>
 
         <v-card-text class="white--text pt-0">

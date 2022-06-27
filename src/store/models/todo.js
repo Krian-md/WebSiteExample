@@ -1,12 +1,19 @@
 
 export default {
     actions: {
-        async fetchTodos(ctx, limit = 5) {
-            const res = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=' + limit);
+        async fetchTodos(context, limit = 5) {
+            try {
+                const res = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=' + limit);
+                // const res = await fetch('https://.typicode.com/todos?_limit=' + limit);
+                
+                const todos = await res.json();
             
-            const todos = await res.json();
-            
-            ctx.commit('updateTodos', todos);
+                context.commit('updateTodos', todos);
+                 
+            }
+            catch (error) {
+                context.commit('setMessage', error.message);
+            }
         }
     },
     mutations: {

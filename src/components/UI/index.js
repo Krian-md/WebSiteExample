@@ -1,7 +1,7 @@
 import BaseIcon from '@/components/UI/BaseIcon';
-import UserProfile from '@/components/UI/popup/UserProfile';
+import BaseButton from '@/components/UI/BaseButton';
 
 export default [
     BaseIcon,
-    UserProfile
+    BaseButton,
 ]

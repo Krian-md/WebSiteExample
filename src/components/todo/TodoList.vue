@@ -27,7 +27,7 @@ export default {
         }
     },
     async mounted() {
-      this.fetchTodos(10);
+      this.fetchTodos(20);
     }
 }
 </script>

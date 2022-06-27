@@ -32,12 +32,16 @@
       <v-flex xs12 md4>
         <v-layout justify-end>
 
-          <UserProfile v-model="isDialog"></UserProfile>
-
           <div v-if="$vuetify.breakpoint.mdAndUp">
-            <BaseIcon icon-name="mdi-heart"></BaseIcon>
-            <BaseIcon icon-name="mdi-magnify"></BaseIcon>
-            <BaseIcon icon-name="mdi-account" @click.native="openDialog"></BaseIcon>
+            <BaseButton plain icon>
+              <BaseIcon icon-name="mdi-heart"/>
+            </BaseButton>
+            <BaseButton plain icon>
+              <BaseIcon icon-name="mdi-magnify"/>
+            </BaseButton>
+            <BaseButton plain icon>
+              <BaseIcon icon-name="mdi-account" @click.native="open"/>
+            </BaseButton>
           </div>
 
           <v-menu v-if="$vuetify.breakpoint.smAndDown" bottom offset-y>
@@ -47,9 +51,15 @@
             
             <v-list>
               <v-layout justify-center>
-              <BaseIcon icon-name="mdi-heart"></BaseIcon>
-              <BaseIcon icon-name="mdi-magnify"></BaseIcon>
-              <BaseIcon icon-name="mdi-account" @click.native="openDialog"></BaseIcon>
+                <BaseButton plain icon>
+                  <BaseIcon icon-name="mdi-heart"/>
+                </BaseButton>
+                <BaseButton plain icon>
+                  <BaseIcon icon-name="mdi-magnify"/>
+                </BaseButton>
+                <BaseButton plain icon>
+                  <BaseIcon icon-name="mdi-account" @click.native="open"/>
+                </BaseButton>
               </v-layout>
               <v-list-item v-for="(nav, i) in navigation" :key="i" @click="nav.click">
                 <v-list-item-title>{{nav.title}}</v-list-item-title>
@@ -66,13 +76,16 @@
 <script>
 import images from '@/styles/images';
 import appStates from '@/enums/appStates';
+import popupStates from '@/enums/popupStates';
+
+import { mapMutations } from 'vuex';
 
 export default {
   data() {
     return {
       backgroundNavbar: images.backgroundNavbar,
       logo: images.logo,
-      isDialog: false,
+      dialog: false,
       navigation: [
         {
           title: 'Todo',
@@ -90,6 +103,10 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['openDialog']),
+    open() {
+      this.openDialog({name: popupStates.USER_POPUP, props: []});
+    },
     routerTodo() {
       this.$router.push({name: appStates.TODO});
     },
@@ -98,9 +115,6 @@ export default {
     },
     routerCatalog () {
        this.$router.push({name: appStates.CATALOG});
-    },
-    openDialog() {
-      this.isDialog = !this.isDialog;
     }
   },
 }
