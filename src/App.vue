@@ -1,31 +1,33 @@
 <template>
- <v-app>
-    <component v-for="popup in getAllPopup" :key="popup.name" :is="popup.name"/>
-    <TosterError/>
+  <v-app>
+    <component
+      v-for="popup in getAllPopup"
+      :key="popup.name"
+      :is="popup.name"
+    />
+    <TosterError />
 
-    <Navbar/>
-    
+    <Navbar />
+
     <v-main>
-      <router-view/>
+      <router-view />
     </v-main>
-    
-    <Footer/>
+
+    <Footer />
   </v-app>
 </template>
 
-
 <script>
-import Navbar from '@/components/navbar/Navbar.vue';
-import Footer from '@/components/footer/Footer.vue';
-import UserPopup from '@/components/UI/UserPopup';
-import TosterError from '@/components/UI/TosterError';
-import AnimalPopup from './components/UI/AnimalPopup.vue';
-import { mapGetters } from 'vuex';
+import Navbar from '@/components/navbar/Navbar.vue'
+import Footer from '@/components/footer/Footer.vue'
+import UserPopup from '@/components/UI/UserPopup'
+import TosterError from '@/components/UI/TosterError'
+import AnimalPopup from './components/UI/AnimalPopup.vue'
+import { mapGetters } from 'vuex'
 
 export default {
-  data () {
-    return {
-    }
+  data() {
+    return {}
   },
   name: 'Example',
   computed: mapGetters(['getAllPopup']),
@@ -34,11 +36,9 @@ export default {
     Navbar,
     UserPopup,
     TosterError,
-    AnimalPopup
-  }
-};
+    AnimalPopup,
+  },
+}
 </script>
 
-<style>
- 
-</style>
+<style></style>

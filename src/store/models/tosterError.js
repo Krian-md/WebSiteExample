@@ -1,16 +1,15 @@
-
 export default {
-    mutations: {
-        setMessage(state, msg) {
-            state.message = msg;
-        }
+  mutations: {
+    setMessage(state, msg) {
+      state.message = msg
     },
-    state: {
-        message: ''
+  },
+  state: {
+    message: '',
+  },
+  getters: {
+    getMessage(state) {
+      return state.message
     },
-    getters: {
-        getMessage(state) {
-            return state.message;
-        }
-    }
+  },
 }

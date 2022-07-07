@@ -1,5 +1,5 @@
 export default {
-    TODO: 'TODO',
-    ABOUT: 'ABOUT',
-    CATALOG: 'CATALOG'
+  TODO: 'Todo',
+  ABOUT: 'About',
+  CATALOG: 'Catalog',
 }
