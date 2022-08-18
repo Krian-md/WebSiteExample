@@ -53,21 +53,21 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-import popupStates from '@/enums/popupStates'
+import { mapMutations } from 'vuex';
+import popupStates from '@/enums/popupStates';
 
 export default {
   name: 'UserPopup',
   methods: {
     ...mapMutations(['closeDialog']),
     close() {
-      this.dialog = false
+      this.dialog = false;
     },
   },
   watch: {
     dialog() {
       if (this.dialog === false) {
-        this.closeDialog(popupStates.USER_POPUP)
+        this.closeDialog(popupStates.USER_POPUP);
       }
     },
   },
@@ -86,9 +86,9 @@ export default {
         'Coding',
         'Basejump',
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style></style>

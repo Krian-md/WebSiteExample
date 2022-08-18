@@ -34,16 +34,16 @@
 </template>
 
 <script>
-import BaseIcon from '../UI/BaseIcon.vue'
+import BaseIcon from '../UI/BaseIcon.vue';
 export default {
   components: { BaseIcon },
   data() {
     return {
       icons: ['mdi-facebook', 'mdi-twitter', 'mdi-linkedin', 'mdi-instagram'],
       year: new Date().getFullYear(),
-    }
+    };
   },
-}
+};
 </script>
 
 <style></style>

@@ -11,22 +11,22 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-import images from '@/styles/images.js'
-import popupStates from '@/enums/popupStates'
+import { mapMutations } from 'vuex';
+import images from '@/styles/images.js';
+import popupStates from '@/enums/popupStates';
 
 export default {
   data() {
     return {
       about: images.about,
-    }
+    };
   },
   methods: {
     ...mapMutations(['openDialog']),
     open() {
-      this.openDialog({ name: popupStates.ANIMAL_POPUP, props: [] })
+      this.openDialog({ name: popupStates.ANIMAL_POPUP, props: [] });
     },
   },
   name: 'About',
-}
+};
 </script>

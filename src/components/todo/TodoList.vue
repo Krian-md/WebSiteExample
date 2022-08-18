@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { mapMutations, mapActions, mapGetters } from 'vuex'
+import { mapMutations, mapActions, mapGetters } from 'vuex';
 
 export default {
   computed: mapGetters(['allTodos', 'validTodos']),
@@ -35,16 +35,16 @@ export default {
     ...mapMutations(['deleteTodo', 'doneTodo']),
     ...mapActions(['fetchTodos']),
     deleteTodoFromList(id) {
-      this.deleteTodo(id)
+      this.deleteTodo(id);
     },
     done(id) {
-      this.doneTodo(id)
+      this.doneTodo(id);
     },
   },
   async mounted() {
-    this.fetchTodos(20)
+    this.fetchTodos(20);
   },
-}
+};
 </script>
 
 <style lang="scss">

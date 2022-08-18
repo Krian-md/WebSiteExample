@@ -4,31 +4,31 @@ export default {
       try {
         const res = await fetch(
           'https://jsonplaceholder.typicode.com/todos?_limit=' + limit,
-        )
+        );
         // const res = await fetch('https://.typicode.com/todos?_limit=' + limit);
 
-        const todos = await res.json()
+        const todos = await res.json();
 
-        context.commit('updateTodos', todos)
+        context.commit('updateTodos', todos);
       } catch (error) {
-        context.commit('setMessage', error.message)
+        context.commit('setMessage', error.message);
       }
     },
   },
   mutations: {
     updateTodos(state, todos) {
-      state.todos = todos
+      state.todos = todos;
     },
     createTodo(state, newTodo) {
-      state.todos.unshift(newTodo)
+      state.todos.unshift(newTodo);
     },
     deleteTodo(state, id) {
-      state.todos.splice(findIndexOf(state, id), 1)
+      state.todos.splice(findIndexOf(state, id), 1);
     },
     doneTodo(state, id) {
-      let todo = state.todos[findIndexOf(state, id)]
+      let todo = state.todos[findIndexOf(state, id)];
       if (todo) {
-        todo.completed = !todo.completed
+        todo.completed = !todo.completed;
       }
     },
   },
@@ -38,15 +38,15 @@ export default {
   getters: {
     validTodos(state) {
       return state.todos.filter((todo) => {
-        return todo.title
-      })
+        return todo.title;
+      });
     },
     allTodos(state) {
-      return state.todos
+      return state.todos;
     },
   },
-}
+};
 
 function findIndexOf(state, id) {
-  return state.todos.findIndex((todo) => todo.id === id)
+  return state.todos.findIndex((todo) => todo.id === id);
 }

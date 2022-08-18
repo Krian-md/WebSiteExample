@@ -3,4 +3,4 @@ export default {
 
   logo: require('@/assets/logo.png'),
   about: require('@/assets/road.jpg'),
-}
+};

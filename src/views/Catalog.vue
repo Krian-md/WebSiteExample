@@ -47,14 +47,14 @@ export default {
     return {
       date: new Date(),
       isShow: false,
-    }
+    };
   },
   methods: {
     changeState() {
-      this.isShow = !this.isShow
+      this.isShow = !this.isShow;
     },
   },
-}
+};
 </script>
 
 <style></style>
