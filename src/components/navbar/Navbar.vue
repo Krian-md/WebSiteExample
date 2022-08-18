@@ -64,11 +64,11 @@
 </template>
 
 <script>
-import images from '@/styles/images'
-import appStates from '@/enums/appStates'
-import popupStates from '@/enums/popupStates'
+import images from '@/styles/images';
+import appStates from '@/enums/appStates';
+import popupStates from '@/enums/popupStates';
 
-import { mapMutations } from 'vuex'
+import { mapMutations } from 'vuex';
 
 export default {
   data() {
@@ -90,24 +90,24 @@ export default {
           click: this.routerCatalog,
         },
       ],
-    }
+    };
   },
   methods: {
     ...mapMutations(['openDialog']),
     open() {
-      this.openDialog({ name: popupStates.USER_POPUP, props: [] })
+      this.openDialog({ name: popupStates.USER_POPUP, props: [] });
     },
     routerTodo() {
-      this.$router.push({ name: appStates.TODO })
+      this.$router.push({ name: appStates.TODO });
     },
     routerAbout() {
-      this.$router.push({ name: appStates.ABOUT })
+      this.$router.push({ name: appStates.ABOUT });
     },
     routerCatalog() {
-      this.$router.push({ name: appStates.CATALOG })
+      this.$router.push({ name: appStates.CATALOG });
     },
   },
-}
+};
 </script>
 
 <style scoped></style>

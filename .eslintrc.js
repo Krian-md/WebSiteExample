@@ -16,9 +16,9 @@ module.exports = {
       'warn',
       {
         singleQuote: true,
-        semi: false,
+        semi: true,
         trailingComma: 'all',
       },
     ],
   },
-}
+};

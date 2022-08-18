@@ -13,32 +13,32 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-import popupStates from '@/enums/popupStates'
+import { mapMutations } from 'vuex';
+import popupStates from '@/enums/popupStates';
 
 export default {
   data() {
     return {
       dialog: true,
-    }
+    };
   },
   methods: {
     ...mapMutations(['closeDialog', 'openDialog']),
     close() {
-      this.dialog = false
+      this.dialog = false;
     },
     open() {
-      this.openDialog({ name: popupStates.USER_POPUP, props: [] })
+      this.openDialog({ name: popupStates.USER_POPUP, props: [] });
     },
   },
   watch: {
     dialog() {
       if (this.dialog === false) {
-        this.closeDialog(popupStates.ANIMAL_POPUP)
+        this.closeDialog(popupStates.ANIMAL_POPUP);
       }
     },
   },
-}
+};
 </script>
 
 <style></style>

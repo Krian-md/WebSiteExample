@@ -1,7 +1,7 @@
 export default {
   mutations: {
     setMessage(state, msg) {
-      state.message = msg
+      state.message = msg;
     },
   },
   state: {
@@ -9,7 +9,7 @@ export default {
   },
   getters: {
     getMessage(state) {
-      return state.message
+      return state.message;
     },
   },
-}
+};

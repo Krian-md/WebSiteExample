@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations } from 'vuex';
 
 export default {
   data: () => ({
@@ -34,12 +34,12 @@ export default {
           title: this.title,
           completed: this.completed,
           id: Date.now(),
-        })
-        this.$refs.form.reset()
+        });
+        this.$refs.form.reset();
       }
     },
   },
-}
+};
 </script>
 
 <style scoped>
